@@ -57,7 +57,7 @@ public class ScoreService {
   private Movie updateMovieScore(Movie movie) {
     // final var totalScores = movie.getScores().size();
     // final var scores = movie.getScores().stream().mapToDouble(Score::getValue).sum();
-    // movie.setScore(movie.getScoresAverage());
+    movie.setScore(movie.getScoresAverage());
     movie.setCount(movie.getAmountOfScores());
     movie = movieRepository.save(movie);
     return movie;
