@@ -176,6 +176,27 @@ public class Movie {
   }
 
   /**
+   * @return
+   */
+  public Double getScoresAverage() {
+    return getScoresSum() / getAmountOfScores();
+  }
+
+  /**
+   * @return
+   */
+  public Double getScoresSum() {
+    return scores.stream().mapToDouble(Score::getValue).sum();
+  }
+
+  /**
+   * @return
+   */
+  public int getAmountOfScores() {
+    return scores.size();
+  }
+
+  /**
    * @param scores the scores to set
    */
   public void setScores(Set<Score> scores) {
