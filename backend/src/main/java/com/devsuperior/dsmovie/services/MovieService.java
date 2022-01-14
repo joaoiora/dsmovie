@@ -27,13 +27,13 @@ public class MovieService {
    */
   @Transactional(readOnly = true)
   public Page<MovieDTO> findAll(Pageable pageable) {
-    final var movies = repository.findAll(pageable);
+    final var movies = repository.findAllByOrderByIdAsc(pageable);
     return movies.map(MovieDTO::new);
   }
 
   @Transactional(readOnly = true)
   public MovieDTO findById(Long id) {
-    Movie movie = repository.findById(id).get();
+    final var movie = repository.findById(id).get();
     return new MovieDTO(movie);
   }
 
