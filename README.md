@@ -1,4 +1,4 @@
-# Movie Ratings - dsmovie
+# Movie Ratings
 
 ## Description
 
@@ -7,6 +7,8 @@ Monorepo for a web application using Java with Spring Boot and Spring Data on th
 The application consists of a simple MVP for rating movies. The rating requires an score and the reviewer's e-mail address.
 
 If the reviewer has already reviewed a movie, the amount of reviews and the review average note will be recalculated on the backend, and the star rating will be updated as well on the frontend.
+
+Developed as part of __Semana Spring React SDS 6.0__ by [DevSuperior](https://devsuperior.com.br/cursos).
 
 ## Backend Deploy
 
